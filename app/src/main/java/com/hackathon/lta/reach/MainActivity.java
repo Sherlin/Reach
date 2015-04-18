@@ -32,6 +32,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
+
         final ImageButton avatarButton = (ImageButton) findViewById(R.id.main_avatar);
 
         avatarButton.setOnClickListener(new View.OnClickListener()
