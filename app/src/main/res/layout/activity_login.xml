@@ -5,7 +5,8 @@
     android:layout_height="fill_parent"
     android:orientation="horizontal"
     android:paddingLeft="32dp"
-    android:paddingRight="32dp">
+    android:paddingRight="32dp"
+    android:clickable="true">
 
 
         <TextView
@@ -49,6 +50,8 @@
             android:layout_height="wrap_content"
             android:text="@string/login_skip"
             android:layout_below="@id/login_google"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            style="?android:borderlessButtonStyle"/>
 
 </RelativeLayout>

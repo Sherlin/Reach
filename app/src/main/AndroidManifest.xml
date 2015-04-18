@@ -26,6 +26,10 @@
             android:label="@string/title_activity_login"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".LoginSplash"
+            android:label="@string/title_activity_login_splash" >
+        </activity>
     </application>
 
 </manifest>

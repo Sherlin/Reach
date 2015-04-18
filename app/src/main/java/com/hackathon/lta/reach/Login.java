@@ -37,10 +37,11 @@ public class Login extends Activity {
             }
         });
 
+
         login_skip.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                login();
+                skip();
 
             }
         });
@@ -72,8 +73,15 @@ public class Login extends Activity {
 
     public void login(){
 
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, LoginSplash.class);
         startActivity(i);
 
+    }
+
+    /********** TO CHANGE DESTINATION OF METHOD *************/
+    public void skip()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
