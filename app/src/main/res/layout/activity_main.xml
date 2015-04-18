@@ -13,9 +13,14 @@
 
     <ImageButton
         android:id="@+id/main_avatar"
+        android:src="@raw/avatar"
+        android:background="@null"
         android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp" />
 
 
 
@@ -25,19 +30,23 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/main_medals"
+            android:id="@+id/main_medal"
             android:src="@raw/medal"
             android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <ImageButton
-            android:id="@+id/main_rewards"
+            android:id="@+id/main_reward"
+            android:src="@raw/reward"
+            android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <ImageButton
             android:id="@+id/main_social"
+            android:src="@raw/social"
+            android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

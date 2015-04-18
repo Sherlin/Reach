@@ -32,5 +32,9 @@
     <string name="setup2_home_time">9:00 am</string>
     <string name="setup2_work_time">5:00 pm</string>
     <string name="title_activity_setup2">Setup2</string>
+    <string name="title_activity_reward">reward</string>
+    <string name="title_activity_avatar">Avatar</string>
+    <string name="title_activity_social">Social</string>
+    <string name="title_activity_medal">Medal</string>
 
 </resources>

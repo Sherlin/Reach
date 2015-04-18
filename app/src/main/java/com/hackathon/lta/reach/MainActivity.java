@@ -1,10 +1,12 @@
 package com.hackathon.lta.reach;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 
 public class MainActivity extends Activity {
@@ -13,6 +15,46 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // main_medal main_reward main_social
+
+        final ImageButton avatarButton = (ImageButton) findViewById(R.id.main_avatar);
+        final ImageButton medalButton = (ImageButton) findViewById(R.id.main_medal);
+        final ImageButton rewardButton = (ImageButton) findViewById(R.id.main_reward);
+        final ImageButton socialButton = (ImageButton) findViewById(R.id.main_social);
+
+        avatarButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                goAvatar();
+            }
+        });
+
+        medalButton.setOnClickListener(new View.OnClickListener()
+        {
+            public onClick(View v)
+            {
+                goMedal();
+            }
+        });
+
+        rewardButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                goReward();
+            }
+        });
+
+        socialButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                goSocial();
+            }
+        });
+
     }
 
 
@@ -36,5 +78,30 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void goAvatar()
+    {
+        Intent intent = new Intent(this, Avatar.class);
+        startActivity(intent)
+    }
+
+    public void goMedal()
+    {
+        Intent intent = new Intent(this, Medal.class);
+        startActivity(intent);
+    }
+
+    public void goReward()
+    {
+        Intent intent = new Intent(this, Reward.class);
+        startActivity(intent);
+
+    }
+
+    public void goSocial()
+    {
+        Intent intent = new Intent(this, Social.class);
+        startActivity(intent);
     }
 }

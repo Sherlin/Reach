@@ -38,6 +38,22 @@
             android:name=".Setup2"
             android:label="@string/title_activity_setup2" >
         </activity>
+        <activity
+            android:name=".Reward"
+            android:label="@string/title_activity_reward" >
+        </activity>
+        <activity
+            android:name=".Avatar"
+            android:label="@string/title_activity_avatar" >
+        </activity>
+        <activity
+            android:name=".Social"
+            android:label="@string/title_activity_social" >
+        </activity>
+        <activity
+            android:name=".Medal"
+            android:label="@string/title_activity_medal" >
+        </activity>
     </application>
 
 </manifest>
