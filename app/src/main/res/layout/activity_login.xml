@@ -13,7 +13,7 @@
             android:text="@string/login_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@id/login_facebook"
+            android:layout_above="@+id/login_facebook"
             android:layout_centerHorizontal="true"/>
 
         <ImageButton
@@ -23,7 +23,8 @@
             android:src="@raw/facebook_login"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:layout_above="@id/login_orText"/>
+            android:layout_above="@+id/login_orText"
+            android:background="@null"/>
 
         <TextView
             android:id="@+id/login_orText"
@@ -39,7 +40,8 @@
             android:src="@raw/google_login"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:layout_below="@id/login_orText"/>
+            android:layout_below="@id/login_orText"
+            android:background="@null"/>
 
         <Button
             android:id="@+id/login_skip"

@@ -1,9 +1,13 @@
 package com.hackathon.lta.reach;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 
 public class Login extends Activity {
@@ -12,6 +16,35 @@ public class Login extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        final ImageButton login_facebook = (ImageButton) findViewById(R.id.login_facebook);
+        final ImageButton login_google = (ImageButton) findViewById(R.id.login_google);
+        final Button login_skip = (Button) findViewById(R.id.login_skip);
+
+        login_facebook.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                login();
+
+            }
+        });
+
+        login_google.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                login();
+
+            }
+        });
+
+        login_skip.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                login();
+
+            }
+        });
+
     }
 
 
@@ -35,5 +68,12 @@ public class Login extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void login(){
+
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+
     }
 }
