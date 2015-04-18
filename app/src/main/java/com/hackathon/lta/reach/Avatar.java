@@ -1,9 +1,12 @@
 package com.hackathon.lta.reach;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 
 
 public class Avatar extends ActionBarActivity {
@@ -12,8 +15,24 @@ public class Avatar extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avatar);
+
+        getSupportActionBar().hide();
+
+        final ImageButton backButton = (ImageButton) findViewById(R.id.back);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+                back();
+            }
+        });
     }
 
+    public void back()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
