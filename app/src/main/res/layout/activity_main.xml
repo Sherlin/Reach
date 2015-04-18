@@ -22,6 +22,21 @@
         android:layout_height="wrap_content"
         android:paddingTop="30dp" />
 
+    <!-- Insert ViewPager here -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pairing_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pairing_pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp" />
+
+    </android.support.v4.view.ViewPager>
 
 
     <LinearLayout

@@ -16,8 +16,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // main_medal main_reward main_social
-
         final ImageButton avatarButton = (ImageButton) findViewById(R.id.main_avatar);
         final ImageButton medalButton = (ImageButton) findViewById(R.id.main_medal);
         final ImageButton rewardButton = (ImageButton) findViewById(R.id.main_reward);
