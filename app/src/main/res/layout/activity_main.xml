@@ -19,8 +19,13 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="30dp" />
+        android:layout_height="0dp"
+        android:paddingTop="30dp"
+        android:layout_weight="0.2"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"/>
 
     <!-- Insert ViewPager here -->
     <android.support.v4.view.ViewPager
@@ -41,29 +46,38 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.2">
 
         <ImageButton
             android:id="@+id/main_medal"
             android:src="@raw/medal"
             android:background="@null"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.333"
+            android:scaleType="fitCenter"/>
 
         <ImageButton
             android:id="@+id/main_reward"
             android:src="@raw/reward"
             android:background="@null"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.333"
+            android:padding="10dp"
+            android:scaleType="fitCenter"/>
 
         <ImageButton
             android:id="@+id/main_social"
             android:src="@raw/social"
             android:background="@null"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.333"
+            android:padding="10dp"
+            android:scaleType="fitCenter"/>
 
     </LinearLayout>
 
