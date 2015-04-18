@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 
         medalButton.setOnClickListener(new View.OnClickListener()
         {
-            public onClick(View v)
+            public void onClick(View v)
             {
                 goMedal();
             }
@@ -83,7 +83,7 @@ public class MainActivity extends Activity {
     public void goAvatar()
     {
         Intent intent = new Intent(this, Avatar.class);
-        startActivity(intent)
+        startActivity(intent);
     }
 
     public void goMedal()
