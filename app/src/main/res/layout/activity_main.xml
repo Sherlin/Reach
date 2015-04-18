@@ -26,6 +26,8 @@
 
         <ImageButton
             android:id="@+id/main_medals"
+            android:src="@raw/medal"
+            android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
