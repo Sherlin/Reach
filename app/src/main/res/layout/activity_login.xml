@@ -1,0 +1,52 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp">
+
+
+        <TextView
+            android:id="@+id/login_loginText"
+            android:text="@string/login_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/login_facebook"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/login_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@raw/facebook_login"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_above="@id/login_orText"/>
+
+        <TextView
+            android:id="@+id/login_orText"
+            android:text="@string/login_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <ImageButton
+            android:id="@+id/login_google"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@raw/google_login"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_below="@id/login_orText"/>
+
+        <Button
+            android:id="@+id/login_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_skip"
+            android:layout_below="@id/login_google"
+            android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
