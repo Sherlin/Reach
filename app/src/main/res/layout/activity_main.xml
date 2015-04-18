@@ -22,16 +22,21 @@
         android:layout_height="0dp"
         android:paddingTop="30dp"
         android:layout_weight="0.2"/>
+
+<!--
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="0.6"/>
-
+-->
     <!-- Insert ViewPager here -->
+
     <android.support.v4.view.ViewPager
-        android:id="@+id/pairing_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/main_pager"
+        android:layout_width="288dp"
+        android:layout_height="316dp"
+        android:background="@null"
+        android:layout_gravity="center">
 
         <android.support.v4.view.PagerTitleStrip
             android:id="@+id/pairing_pager_title_strip"
