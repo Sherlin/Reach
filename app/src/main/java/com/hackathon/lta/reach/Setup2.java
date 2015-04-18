@@ -3,49 +3,35 @@ package com.hackathon.lta.reach;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
-public class LoginSplash extends Activity {
-
-    // Splash screen timer
-    private static int SPLASH_TIME_OUT = 1000;
+public class Setup2 extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_splash);
+        setContentView(R.layout.activity_setup2);
 
-        new Handler().postDelayed(new Runnable() {
+        final Button setup_done= (Button) findViewById(R.id.setup2_done);
 
-            /*
-             * Showing splash screen with a timer. This will be useful when you
-             * want to show case your app logo / company
-             */
-
-            @Override
-            public void run() {
-                // This method will be executed once the timer is over
-                // Start your app main activity
-                Intent i = new Intent(LoginSplash.this, Setup1.class);
-                startActivity(i);
-
-                // close this activity
-                finish();
+        setup_done.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                done();
             }
-        }, SPLASH_TIME_OUT);
-
-
-
+        });
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_splash, menu);
+        getMenuInflater().inflate(R.menu.menu_setup1, menu);
         return true;
     }
 
@@ -63,5 +49,11 @@ public class LoginSplash extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-}
 
+    public void done()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+}

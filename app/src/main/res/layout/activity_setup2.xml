@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.hackathon.lta.reach.Setup1"
+    android:paddingTop="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/setup_heading"
+        android:text="@string/setup_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:paddingBottom="30dp"
+        android:textIsSelectable="false"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/setup2_leave_home"
+        android:text="@string/setup2_leave_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup_heading"
+        android:paddingTop="30dp"
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/setup2_home_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup2_leave_home"
+        android:paddingTop="30dp"
+        android:inputType="time" />
+
+
+    <TextView
+        android:id="@+id/setup2_leave_work"
+        android:text="@string/setup2_leave_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup2_home_time"
+        android:paddingTop="60dp"
+        android:textSize="22dp" />
+
+    <EditText
+        android:id="@+id/setup2_work_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup2_leave_work"
+        android:paddingTop="30dp"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/setup2_step"
+        android:text="@string/setup2_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup2_work_time"
+        android:paddingTop="30dp"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="false"
+        android:paddingBottom="40dp" />
+
+    <Button
+        android:id="@+id/setup2_done"
+        android:text="@string/setup2_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        style="?android:borderlessButtonStyle"
+
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingTop="50dp" />
+
+</RelativeLayout>

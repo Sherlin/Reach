@@ -78,10 +78,9 @@ public class Login extends Activity {
 
     }
 
-    /********** TO CHANGE DESTINATION OF METHOD *************/
     public void skip()
     {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Setup1.class);
         startActivity(intent);
     }
 }
