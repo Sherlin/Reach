@@ -4,24 +4,113 @@
     android:orientation="vertical"
     tools:context="com.hackathon.lta.reach.Social">
 
-    <ImageView
-        android:src="@raw/work_in_progress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:paddingTop="160dp"
-        android:layout_gravity="center_vertical" />
-
     <ImageButton
-        android:id="@+id/back"
-        android:src="@raw/back"
-        android:layout_width="169dp"
-        android:layout_height="73dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:layout_gravity="center"
+        android:id="@+id/social_header"
+        android:src="@raw/social_header"
         android:background="@null"
-        />
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1" />
+
+    <!--
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"/>
+    -->
+    <!-- Insert ViewPager here -->
+
+    <!--
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_pager"
+        android:layout_width="match_parent"
+        android:layout_height="283dp"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:paddingBottom="15dp"
+        android:layout_weight="0.03">
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pairing_pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp" />
+
+    </android.support.v4.view.ViewPager>
+-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@raw/social_main"
+        android:scaleType="fitCenter"
+        android:layout_weight="0.8" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight=".1">
+
+        <!--
+        home
+        goal
+        reward
+        map
+        social
+        -->
+
+        <ImageButton
+            android:id="@+id/social_home"
+            android:src="@raw/home_normal"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.333"
+            android:scaleType="centerCrop"
+            android:baselineAlignBottom="false" />
+
+        <ImageButton
+            android:id="@+id/social_medal"
+            android:src="@raw/goals_normal"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.333"
+            android:scaleType="centerCrop" />
+
+        <ImageButton
+            android:id="@+id/social_reward"
+            android:src="@raw/rewards_normal"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.333"
+            android:scaleType="centerCrop"/>
+
+        <ImageButton
+            android:id="@+id/social_map"
+            android:src="@raw/map_normal"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.333"
+            android:scaleType="centerCrop" />
+
+        <ImageButton
+            android:id="@+id/social_social"
+            android:src="@raw/social_pressed"
+            android:background="@null"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.333"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
 
 </LinearLayout>

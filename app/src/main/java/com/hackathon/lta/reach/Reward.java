@@ -18,20 +18,62 @@ public class Reward extends ActionBarActivity {
 
         getSupportActionBar().hide();
 
-        final ImageButton backButton = (ImageButton) findViewById(R.id.back);
+        final ImageButton homeButton = (ImageButton) findViewById(R.id.reward_home);
+        final ImageButton medalButton = (ImageButton) findViewById(R.id.reward_medal);
+        final ImageButton mapButton = (ImageButton) findViewById(R.id.reward_map);
+        final ImageButton socialButton = (ImageButton) findViewById(R.id.reward_social);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+        homeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                back();
+                goHome();
+            }
+        });
+
+        medalButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goMedal();
+            }
+        });
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goMap();
+            }
+        });
+
+        socialButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goSocial();
             }
         });
     }
 
-    public void back()
+    public void goHome()
     {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void goMedal()
+    {
+        Intent intent = new Intent(this, Medal.class);
+        startActivity(intent);
+
+    }
+
+    public void goMap()
+    {
+        Intent intent = new Intent(this, Map.class);
+        startActivity(intent);
+    }
+
+    public void goSocial()
+    {
+        Intent intent = new Intent(this, Social.class);
+        startActivity(intent);
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -36,5 +36,6 @@
     <string name="title_activity_avatar">Avatar</string>
     <string name="title_activity_social">Social</string>
     <string name="title_activity_medal">Medal</string>
+    <string name="title_activity_map">Map</string>
 
 </resources>

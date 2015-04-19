@@ -54,6 +54,10 @@
             android:name=".Medal"
             android:label="@string/title_activity_medal" >
         </activity>
+        <activity
+            android:name=".Map"
+            android:label="@string/title_activity_map" >
+        </activity>
     </application>
 
 </manifest>

@@ -43,14 +43,15 @@ public class MainActivity extends ActionBarActivity {
                 goAvatar();
             }
         });
-
+/**
         // Initialize the ViewPager
         mPagerAdapter = new ActivityPagerAdapter(getSupportFragmentManager());
         mImagePager = (ViewPager) findViewById(R.id.main_pager);
         mImagePager.setAdapter(mPagerAdapter);
-
+**/
         final ImageButton medalButton = (ImageButton) findViewById(R.id.main_medal);
         final ImageButton rewardButton = (ImageButton) findViewById(R.id.main_reward);
+        final ImageButton mapButton = (ImageButton) findViewById(R.id.main_map);
         final ImageButton socialButton = (ImageButton) findViewById(R.id.main_social);
 
         medalButton.setOnClickListener(new View.OnClickListener()
@@ -66,6 +67,14 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v)
             {
                 goReward();
+            }
+        });
+
+        mapButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                goMap();
             }
         });
 
@@ -192,6 +201,12 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, Reward.class);
         startActivity(intent);
 
+    }
+
+    public void goMap()
+    {
+        Intent intent = new Intent(this, Map.class);
+        startActivity(intent);
     }
 
     public void goSocial()

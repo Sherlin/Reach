@@ -2,18 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.hackathon.lta.reach.MainActivity">
-
-    <!--
-                    ImageButton
-                    ViewPager
-        Medals       Rewards      Social
-        ImageButton ImageButton ImageButton
-    -->
+    tools:context="com.hackathon.lta.reach.Map">
 
     <ImageButton
-        android:id="@+id/main_avatar"
-        android:src="@raw/home_header"
+        android:id="@+id/map_header"
+        android:src="@raw/map_header"
         android:background="@null"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
@@ -22,12 +15,12 @@
         android:layout_height="0dp"
         android:layout_weight=".1" />
 
-<!--
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"/>
--->
+    <!--
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"/>
+    -->
     <!-- Insert ViewPager here -->
 
     <!--
@@ -54,7 +47,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:src="@raw/home_main"
+        android:src="@raw/map_main"
         android:scaleType="fitCenter"
         android:layout_weight="0.8" />
 
@@ -73,8 +66,8 @@
         -->
 
         <ImageButton
-            android:id="@+id/main_home"
-            android:src="@raw/home_pressed"
+            android:id="@+id/map_home"
+            android:src="@raw/home_normal"
             android:background="@null"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -83,7 +76,7 @@
             android:baselineAlignBottom="false" />
 
         <ImageButton
-            android:id="@+id/main_medal"
+            android:id="@+id/map_medal"
             android:src="@raw/goals_normal"
             android:background="@null"
             android:layout_width="0dp"
@@ -92,7 +85,7 @@
             android:scaleType="centerCrop" />
 
         <ImageButton
-            android:id="@+id/main_reward"
+            android:id="@+id/map_reward"
             android:src="@raw/rewards_normal"
             android:background="@null"
             android:layout_width="0dp"
@@ -101,8 +94,8 @@
             android:scaleType="centerCrop"/>
 
         <ImageButton
-            android:id="@+id/main_map"
-            android:src="@raw/map_normal"
+            android:id="@+id/map_map"
+            android:src="@raw/map_pressed"
             android:background="@null"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -110,7 +103,7 @@
             android:scaleType="centerCrop" />
 
         <ImageButton
-            android:id="@+id/main_social"
+            android:id="@+id/map_social"
             android:src="@raw/social_normal"
             android:background="@null"
             android:layout_width="0dp"

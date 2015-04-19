@@ -18,6 +18,35 @@ public class Medal extends ActionBarActivity {
 
         getSupportActionBar().hide();
 
+        final ImageButton homeButton = (ImageButton) findViewById(R.id.medal_home);
+        final ImageButton rewardButton = (ImageButton) findViewById(R.id.medal_reward);
+        final ImageButton mapButton = (ImageButton) findViewById(R.id.medal_map);
+        final ImageButton socialButton = (ImageButton) findViewById(R.id.medal_social);
+
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goHome();
+            }
+        });
+
+        rewardButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goReward();
+            }
+        });
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goMap();
+            }
+        });
+
+        socialButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                goSocial();
+            }
+        });
+/**
         final ImageButton backButton = (ImageButton) findViewById(R.id.back);
 
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +54,7 @@ public class Medal extends ActionBarActivity {
                 back();
             }
         });
+ **/
     }
 
     public void back()
@@ -53,5 +83,30 @@ public class Medal extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void goHome()
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void goReward()
+    {
+        Intent intent = new Intent(this, Reward.class);
+        startActivity(intent);
+
+    }
+
+    public void goMap()
+    {
+        Intent intent = new Intent(this, Map.class);
+        startActivity(intent);
+    }
+
+    public void goSocial()
+    {
+        Intent intent = new Intent(this, Social.class);
+        startActivity(intent);
     }
 }

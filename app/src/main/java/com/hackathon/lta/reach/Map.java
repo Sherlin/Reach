@@ -9,19 +9,19 @@ import android.view.View;
 import android.widget.ImageButton;
 
 
-public class Social extends ActionBarActivity {
+public class Map extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_social);
+        setContentView(R.layout.activity_map);
 
         getSupportActionBar().hide();
 
-        final ImageButton homeButton = (ImageButton) findViewById(R.id.social_home);
-        final ImageButton medalButton = (ImageButton) findViewById(R.id.social_medal);
-        final ImageButton rewardButton = (ImageButton) findViewById(R.id.social_reward);
-        final ImageButton mapButton = (ImageButton) findViewById(R.id.social_map);
+        final ImageButton homeButton = (ImageButton) findViewById(R.id.map_home);
+        final ImageButton medalButton = (ImageButton) findViewById(R.id.map_medal);
+        final ImageButton rewardButton = (ImageButton) findViewById(R.id.map_reward);
+        final ImageButton socialButton = (ImageButton) findViewById(R.id.map_social);
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -41,9 +41,9 @@ public class Social extends ActionBarActivity {
             }
         });
 
-        mapButton.setOnClickListener(new View.OnClickListener() {
+        socialButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                goMap();
+                goSocial();
             }
         });
     }
@@ -67,16 +67,17 @@ public class Social extends ActionBarActivity {
         startActivity(intent);
     }
 
-    public void goMap()
+    public void goSocial()
     {
-        Intent intent = new Intent(this, Map.class);
+        Intent intent = new Intent(this, Social.class);
         startActivity(intent);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_social, menu);
+        getMenuInflater().inflate(R.menu.menu_map, menu);
         return true;
     }
 
